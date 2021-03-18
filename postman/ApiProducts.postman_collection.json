@@ -1,0 +1,67 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ApiProducts",
+		"_postman_id": "3b3792b8-1bc3-9d0c-ca24-b132c0a7ba8b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:4000/products",
+					"request": {
+						"url": "http://localhost:4000/products",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"laptop canon\",\n\t\"category\" : \"laptops\",\n\t\"price\" : 1499.99,\n\t\"imgeURL\" : \"https://www.zdnet.com/a/hub/i/2020/08/18/739f0dee-76d3-4cf3-922c-08868d8798ca/msi-creator-15-laptop-notebook-pc.jpg\"\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4000/products",
+					"request": {
+						"url": "http://localhost:4000/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"laptop bmax\",\n\t\"category\" : \"laptops\",\n\t\"price\" : 299.99,\n\t\"imgeURL\" : \"https://www.zdnet.com/a/hub/i/2020/08/18/739f0dee-76d3-4cf3-922c-08868d8798ca/msi-creator-15-laptop-notebook-pc.jpg\"\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": []
+		}
+	]
+}
