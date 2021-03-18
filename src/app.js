@@ -1,10 +1,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
 const connectDB = require ('./database');
-var path = require('path');
 import morgan from 'morgan'
 import pkg from '../package.json'
+
+import {createRoles} from './libs/initialSetup'
+
 import productRoutes from './routes/product.routes'
+import authRoutes from './routes/auth.routes'
 
 
 dotenv.config({path: './config.env'});
@@ -13,6 +16,7 @@ connectDB()
 
 
 const app = express()
+createRoles();
 
 
 app.set('pkg', pkg);
@@ -29,7 +33,8 @@ app.get('/', (req, res) => {
     })
 })
 
-app.use('/products', productRoutes);
+app.use('/api/products', productRoutes)
+app.use('/api/auth', authRoutes)
 
 
 
