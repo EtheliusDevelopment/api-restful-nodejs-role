@@ -8,6 +8,7 @@ import {createRoles} from './libs/initialSetup'
 
 import productRoutes from './routes/product.routes'
 import authRoutes from './routes/auth.routes'
+import userRoutes from './routes/user.routes'
 
 
 dotenv.config({path: './config.env'});
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productRoutes)
 app.use('/api/auth', authRoutes)
+app.use('/api/users', userRoutes)
 
 
 
